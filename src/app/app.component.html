@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!--div style="text-align:center">
   <h1>
     Bem vindo to {{ title }}!
   </h1>
@@ -12,7 +12,33 @@
     <li class="news"><a href="#">Newsletter</a></li>
     <li class="contact"><a href="#">Contact</a></li>
   </ul>
-</div>
+</div-->
+<mat-toolbar color="primary">
+  <span class="fill-remaining-space">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item (click)="navigate('home')">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-menu-item (click)="navigate('filmes')">
+        <mat-icon>movie</mat-icon>
+        <span>Filmes</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>videocam</mat-icon>
+        <span>Let's talk</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </span>
+  <span class="fill-remaining-space">Sistemas de Filmes</span>
+</mat-toolbar>
 <div class="container">
   <router-outlet></router-outlet>
 </div>

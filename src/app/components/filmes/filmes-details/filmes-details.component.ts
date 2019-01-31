@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api.service';
+import { ApiService } from '../../../services/filmes-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Filme } from 'src/app/shared/Filme';
 
 @Component({
   selector: 'app-filmes-details',
@@ -9,17 +10,29 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class FilmesDetailsComponent implements OnInit {
 
-  filme:any;
-
+  filme = new Filme();
+  isLoadingResults = true;
   constructor(private api: ApiService, 
               private router: Router,
               private route: ActivatedRoute) { }
 
+  deletaFilme(id: number) {
+    this.api.deleteFilme(id)
+      .subscribe(res => {
+        console.log(res);
+        this.router.navigate(['/filmes']);
+      }, (err) => {
+        console.log(err);
+      }
+    );  
+  }
+
   ngOnInit() {
     let id = this.route.snapshot.params['id'];
-    this.api.getFilmePorId(id).subscribe((filme: {}) => {
+    this.api.getFilmePorId(id).subscribe((filme: Filme) => {
       console.log(filme);
       this.filme = filme;
+      this.isLoadingResults = false;
     });
   }
 

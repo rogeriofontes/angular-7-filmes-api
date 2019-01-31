@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FilmesComponent } from './filmes/filmes.component';
-import { FilmesAddComponent } from './filmes-add/filmes-add.component';
-import { FilmesDetailsComponent } from './filmes-details/filmes-details.component';
-import { FilmesEditComponent } from './filmes-edit/filmes-edit.component';
+import { FilmesComponent } from './components/filmes/filmes/filmes.component';
+import { FilmesAddComponent } from './components/filmes/filmes-add/filmes-add.component';
+import { FilmesDetailsComponent } from './components/filmes/filmes-details/filmes-details.component';
+import { FilmesEditComponent } from './components/filmes/filmes-edit/filmes-edit.component';
 
 const routes: Routes = [
   {
