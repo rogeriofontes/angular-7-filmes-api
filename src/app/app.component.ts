@@ -17,10 +17,13 @@ export class AppComponent {
       this.router.navigate(['/filmes']);
     } else if (menu === 'categorias') {
       this.router.navigate(['/categorias']);
+    } else if (menu === 'logout') {
+      this.logout();
     }
   }
 
   logout() {
-    this.router.navigate(['/']);
+    localStorage.setItem("usuarioLogado", "");
+    this.router.navigate(['/login']);
   }
 }

@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
 
   login() : void {
     if(this.user.usuario == 'admin' && this.user.password == 'admin'){
+     localStorage.setItem('usuarioLogado', "rogerio");
      this.router.navigate(["filmes"]);
     }else {
       alert("Invalid credentials");
