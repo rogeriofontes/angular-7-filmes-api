@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../../services/filmes-api.service';
+import { FilmesApiService } from '../../../services/filmes-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Filme } from 'src/app/shared/Filme';
 
@@ -12,7 +12,7 @@ export class FilmesDetailsComponent implements OnInit {
 
   filme = new Filme();
   isLoadingResults = true;
-  constructor(private api: ApiService, 
+  constructor(private api: FilmesApiService, 
               private router: Router,
               private route: ActivatedRoute) { }
 

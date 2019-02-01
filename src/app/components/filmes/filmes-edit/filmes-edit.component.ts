@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ApiService } from '../../../services/filmes-api.service';
+import { FilmesApiService } from '../../../services/filmes-api.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Filme } from '../../../shared/Filme';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
@@ -17,7 +17,7 @@ export class FilmesEditComponent implements OnInit {
   descricao:string='';
   isLoadingResults = false;
 
-  constructor(private api: ApiService,
+  constructor(private api: FilmesApiService,
     private router: Router,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder) { }

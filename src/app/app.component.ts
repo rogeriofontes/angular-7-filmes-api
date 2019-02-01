@@ -15,6 +15,8 @@ export class AppComponent {
   navigate(menu: string) {
     if (menu === 'filmes') {
       this.router.navigate(['/filmes']);
+    } else if (menu === 'categorias') {
+      this.router.navigate(['/categorias']);
     }
   }
 }

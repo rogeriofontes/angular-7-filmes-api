@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { ApiService } from '../../../services/filmes-api.service';
+import { FilmesApiService } from '../../../services/filmes-api.service';
 import { Filme } from '../../../shared/Filme';
 import { from } from 'rxjs';
 
@@ -16,7 +16,7 @@ export class FilmesComponent implements OnInit {
   isLoadingResults = true;
   filmes: Filme[] = [];
 
-  constructor(private api: ApiService,
+  constructor(private api: FilmesApiService,
               private router: Router) { }
  
   add() {

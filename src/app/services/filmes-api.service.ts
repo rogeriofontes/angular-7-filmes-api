@@ -12,7 +12,7 @@ const apiUrl = "http://localhost:3000/filmes";
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class FilmesApiService {
 
   constructor(private http: HttpClient) { }
 
@@ -62,4 +62,3 @@ export class ApiService {
   }
 
 }
-fetch

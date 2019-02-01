@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ApiService } from '../../../services/filmes-api.service';
+import { FilmesApiService } from '../../../services/filmes-api.service';
 import { Filme } from '../../../shared/Filme';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
@@ -17,7 +17,7 @@ export class FilmesAddComponent implements OnInit {
   descricao:string='';
   isLoadingResults = false;
 
-  constructor(private api: ApiService, 
+  constructor(private api: FilmesApiService, 
               private router: Router,
               private formBuilder: FormBuilder) { }
   
