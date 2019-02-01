@@ -19,4 +19,8 @@ export class AppComponent {
       this.router.navigate(['/categorias']);
     }
   }
+
+  logout() {
+    this.router.navigate(['/']);
+  }
 }

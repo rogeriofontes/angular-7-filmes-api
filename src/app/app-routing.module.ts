@@ -8,6 +8,7 @@ import { CategoriasEditComponent } from './components/categorias/categorias-edit
 import { CategoriasDetailsComponent } from './components/categorias/categorias-details/categorias-details.component';
 import { CategoriasAddComponent } from './components/categorias/categorias-add/categorias-add.component';
 import { CategoriasComponent } from './components/categorias/categorias/categorias.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   //Filmes
@@ -51,7 +52,9 @@ const routes: Routes = [
     path: 'categorias-edit/:id',
     component: CategoriasEditComponent,
     data: { title: 'Alteração de Categorias'}
-  }
+  },
+  //Login
+  {path : '', component: LoginComponent}
 ];
 
 @NgModule({

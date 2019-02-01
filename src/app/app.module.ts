@@ -28,6 +28,7 @@ import {
   MatMenuModule, MatSidenavModule, MatListModule } from "@angular/material";
 import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     CategoriasAddComponent,
     CategoriasDetailsComponent,
     CategoriasEditComponent,
-    NavComponent
+    NavComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
