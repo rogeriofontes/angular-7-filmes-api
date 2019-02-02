@@ -1,4 +1,28 @@
 {
+  "tiposervico": [
+    {
+      "id": 1,
+      "nome": "Encanador"
+    },
+    {
+      "id": 2,
+      "nome": "Eletricista"
+    },
+    {
+      "nome": "fasdfsd",
+      "id": 3
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "terror"
+    },
+    {
+      "id": 2,
+      "nome": "Comedia"
+    }
+  ],
   "filmes": [
     {
       "id": 1,

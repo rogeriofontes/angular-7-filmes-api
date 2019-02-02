@@ -10,6 +10,10 @@ import { CategoriasAddComponent } from './components/categorias/categorias-add/c
 import { CategoriasComponent } from './components/categorias/categorias/categorias.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuardService } from './shared/guards/auth-guard.service';
+import { TipoServicosComponent } from './components/tipo-servicos/tipo-servicos/tipo-servicos.component';
+import { TipoServicosAddComponent } from './components/tipo-servicos/tipo-servicos-add/tipo-servicos-add.component';
+import { TipoServicosDetailsComponent } from './components/tipo-servicos/tipo-servicos-detais/tipo-servicos-details.component';
+import { TipoServicosEditComponent } from './components/tipo-servicos/tipo-servicos-edit/tipo-servicos-edit.component';
 
 const routes: Routes = [
   //Filmes
@@ -60,6 +64,30 @@ const routes: Routes = [
     path: 'categorias-edit/:id',
     component: CategoriasEditComponent,
     data: { title: 'Alteração de Categorias'}
+  },
+  //tipo de servico
+  {
+    path: 'tipo-servicos',
+    component: TipoServicosComponent,
+    data: { title: 'Lista de Tipo de Servicos'},
+    canActivate: [AuthGuardService]
+  },
+  {
+   path:'tipo-servicos-add',
+   component: TipoServicosAddComponent,
+   data: { title: 'Adicao de Tipo de Servicos'},
+   canActivate: [AuthGuardService]
+  },
+  {
+    path: 'tipo-servicos-details/:id',
+    component: TipoServicosDetailsComponent,
+    data: { title: 'Detalhes de Tipo de Servicos'},
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'tipo-servicos-edit/:id',
+    component: TipoServicosEditComponent,
+    data: { title: 'Alteração de Tipo de Servicos'}
   },
   //Login
   {path: 'login', component: LoginComponent},

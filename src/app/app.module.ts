@@ -29,6 +29,10 @@ import {
 import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { LoginComponent } from './components/login/login.component';
+import { TipoServicosComponent } from './components/tipo-servicos/tipo-servicos/tipo-servicos.component';
+import { TipoServicosAddComponent } from './components/tipo-servicos/tipo-servicos-add/tipo-servicos-add.component';
+import { TipoServicosEditComponent } from './components/tipo-servicos/tipo-servicos-edit/tipo-servicos-edit.component';
+import { TipoServicosDetailsComponent } from './components/tipo-servicos/tipo-servicos-detais/tipo-servicos-details.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,11 @@ import { LoginComponent } from './components/login/login.component';
     CategoriasDetailsComponent,
     CategoriasEditComponent,
     NavComponent,
-    LoginComponent
+    LoginComponent,
+    TipoServicosComponent,
+    TipoServicosAddComponent,
+    TipoServicosEditComponent,
+    TipoServicosDetailsComponent
   ],
   imports: [
     BrowserModule,

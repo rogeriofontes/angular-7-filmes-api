@@ -19,6 +19,8 @@ export class AppComponent {
       this.router.navigate(['/categorias']);
     } else if (menu === 'logout') {
       this.logout();
+    } else if (menu === 'tipo-servicos') {
+      this.router.navigate(['/tipo-servicos']);
     }
   }
 
